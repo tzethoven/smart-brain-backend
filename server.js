@@ -32,8 +32,9 @@ app.use(cors());
 
 
 app.get('/', (req, res) => {
-  db('users').orderBy('id')
-  .then(users => res.json(users));
+  // db('users').orderBy('id')
+  // .then(users => res.json(users));
+  res.send('it is working');
 });
 
 app.post('/signin', signin.handleSignin(db, bcrypt));
